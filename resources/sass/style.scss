@@ -1,0 +1,86 @@
+/*!
+ * GorKa Team
+ * Copyright (c) 2024  Vlad Horpynych <19dynamo27@gmail.com>, Pavel Karpushevskiy <pkarpushevskiy@gmail.com>
+ */
+
+
+[type='text']:focus,
+input:where(:not([type])):focus,
+[type='email']:focus,
+[type='url']:focus,
+[type='password']:focus,
+[type='number']:focus,
+[type='date']:focus,
+[type='datetime-local']:focus,
+[type='month']:focus,
+[type='search']:focus,
+[type='tel']:focus,
+[type='time']:focus,
+[type='week']:focus,
+[multiple]:focus,
+textarea:focus,
+select:focus,
+[type='text'],
+input:where(:not([type])),
+[type='email'],
+[type='url'],
+[type='password'],
+[type='number'],
+[type='date'],
+[type='datetime-local'],
+[type='month'],
+[type='search'],
+[type='tel'],
+[type='time'],
+[type='week'],
+[multiple],
+textarea,
+select{
+    --tw-ring-shadow: unset !important;
+    background-color: unset !important;
+}
+
+
+.data-table-container{
+    //&.v-table > .v-table__wrapper > table > tbody > tr > td{
+    //    padding: 15px;
+    //}
+    .v-data-table-footer{
+        padding-bottom: 25px;
+    }
+    //.v-data-table-footer__items-per-page{
+    //    display: none;
+    //}
+    tr.disabled > td{
+        background-color: #dadada !important;
+    }
+}
+
+/* Content loader */
+.content-loader-logo {
+    background: rgba(0, 116, 178, 1);
+    border-radius: 50%;
+    margin: 10px;
+    height: 100px;
+    width: 100px;
+    box-shadow: 0 0 0 0 rgba(0, 116, 178, 1);
+    transform: scale(1);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(0, 116, 178, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 20px rgba(0, 116, 178, 0);
+    }
+
+    100% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(0, 116, 178, 0);
+    }
+}
